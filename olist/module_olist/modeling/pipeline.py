@@ -6,7 +6,7 @@ from xgboost import XGBClassifier
 from lightgbm import LGBMClassifier
 
 NUMERIC_FEATURES = [
-    "promissed_days",
+    "promised_days",
     "item_count",
     "seller_count",
     "total_price",
@@ -33,10 +33,12 @@ def create_preprocessor() -> ColumnTransformer:
     )
     return preprocessor
 
-def create_GradientBoosting_pipeline() -> Pipeline:
+def create_gradient_boosting_pipeline() -> Pipeline:
     """
     Creates a machine learning pipeline with a Gradient Boosting Classifier.
     """
+    preprocessor = create_preprocessor()
+
     model = GradientBoostingClassifier(
         n_estimators=100,
         learning_rate=0.1,

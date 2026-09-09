@@ -6,11 +6,13 @@ from module_olist.config import (
 
 from module_olist.dataset import (
     load_data,
-    create_dataset,
     save_dataset,
 )
 
-from module_olist.features import create_features
+from module_olist.features import (
+    create_dataset,
+    create_features,
+)
 
 from module_olist.modeling.split import split_data
 
