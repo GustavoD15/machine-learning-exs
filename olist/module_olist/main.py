@@ -74,6 +74,11 @@ def main():
         split_data(data)
     )
 
+    X_test.to_csv(
+    INTERIM_DATA_DIR / "X_test.csv",
+    index=False,
+)
+
     # =============================================
     # CROSS VALIDATION
     # Seleciona modelo + threshold
