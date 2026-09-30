@@ -6,6 +6,19 @@
 
 Brazilian e-commerce public dataset
 
+## Active Learning
+
+Depois de gerar o dataset refinado, execute o experimento de propagação de rótulos:
+
+```bash
+python -m module_olist.modeling.active_learning
+```
+
+O experimento usa apenas a partição de treino, começa com 10 rótulos e consulta os 5 exemplos
+mais incertos por ciclo. O padrão são 4 ciclos, totalizando 30 exemplos rotulados; o tamanho
+do pool é limitado a 1.000 observações porque a propagação calcula relações entre todos os pares.
+O gráfico compara a previsão do modelo com os rótulos revelados pelo oráculo simulado.
+
 ## Project Organization
 
 ```
