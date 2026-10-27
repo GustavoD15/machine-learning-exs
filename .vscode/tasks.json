@@ -1,0 +1,12 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"label": "Reconhecimento facial",
+			"type": "shell",
+			"command": "& '${workspaceFolder}/reconhecedor_facial/.venv/Scripts/python.exe' '${workspaceFolder}/reconhecedor_facial/reconhecimento.py'",
+			"isBackground": false,
+			"problemMatcher": []
+		}
+	]
+}
