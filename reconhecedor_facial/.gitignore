@@ -1,3 +1,27 @@
+# Ambientes locais e pesos baixados pelo DeepFace
 .venv/
+venv/
+env/
 .deepface/
+
+# Python
 __pycache__/
+*.py[cod]
+*$py.class
+
+# Ferramentas de desenvolvimento
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+
+# Configuracao local e segredos
+.env
+.env.*
+!.env.example
+
+# Arquivos gerados e temporarios
+*.log
+.DS_Store
+Thumbs.db
